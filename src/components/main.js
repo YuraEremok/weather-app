@@ -5,7 +5,7 @@ import Sky from 'react-sky';
 
 import {connect} from "react-redux";
 
-import Form from "./form";
+import Form from "./Form";
 
 
 class Main extends Component {
@@ -32,9 +32,9 @@ class Main extends Component {
             <div>
                 <Sky
                     images={{
-                        0: image, /* You can pass as many images as you want *//* You can pass as many images as you want */
-                        1: image, /* You can pass as many images as you want *//* You can pass as many images as you want */
-                        2: image, /* You can pass as many images as you want *//* You can pass as many images as you want */
+                        0: image, /* You can pass as many images as you want */
+                        1: image, /* You can pass as many images as you want */
+                        2: image, /* You can pass as many images as you want */
 
                     }}
                     how={130} /* Pass the number of images Sky will render chosing randomly */
