@@ -6,17 +6,29 @@ import {fetchAPIResponse} from "../actions/fetch_api_data";
 
 import {bindActionCreators} from 'redux';
 
+
+const useStateWithLocalStorage = localStorageKey => {
+    const [value, setValue] = React.useState(
+        localStorage.getItem(localStorageKey) || ''
+    );
+
+    React.useEffect(() => {
+        localStorage.setItem(localStorageKey, value);
+    }, [value]);
+
+    return [value, setValue];
+};
+
+
+
 const Form = (props) => {
 
 
-    const [value, setValue] = React.useState('');
-
-    React.useEffect(() => {
-        localStorage.setItem('myValueInLocalStorage', value);
-    }, [value]);
+    const [value, setValue] = useStateWithLocalStorage(
+        'myValueInLocalStorage'
+    );
 
     const onChange = event => setValue(event.target.value);
-
 
     const getWeather = (e) => {
         e.preventDefault();
@@ -39,7 +51,7 @@ const Form = (props) => {
                     onPlaceSelected={(place) => {
 
                     }}
-
+                    value={value}
                     types={['(regions)']}
                     type="search"
                     autoFocus
