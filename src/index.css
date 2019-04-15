@@ -1,14 +1,317 @@
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  background:  url("abstract-background-shapes.jpg");
+  background-attachment: fixed;
+  background-color: #111111;
+  /*background-size: cover;*/
+  color: #fff;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur 1.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
 }
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+    0px 0px 10px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 25px #fff,
+    0px 0px 50px #fff,
+    0px 0px 50px #fff,
+    0px 0px 50px #7B96B8,
+    0px 0px 150px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px 10px 100px #7B96B8,
+    0px -10px 100px #7B96B8,
+    0px -10px 100px #7B96B8;
+  }
+}
+
+
+
+img[src="https://www.countryflags.io/undefined/flat/64.png"],img[src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/75px-React-icon.svg.png"] {
+  display: none;
+}
+
+
+
+
+
+.CountryFlag{
+padding: 0px;
+  margin: 0px;
+margin-top: -20px;
+bottom: -15px;
+
+}
+
+
+.conditionIcon{
+  margin-top: -30px;
+  margin-bottom: -25px;
+  padding: 0;
+  height: 100px;
+}
+
+
+.container {
+  margin: 50px auto;
+  padding: 10px;
+  width: 70%;
+  max-width: 900px;
+  -webkit-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  border-left:20px solid orangered;
+  position: relative;
+
+
+}
+
+.container h1 {
+  text-transform: capitalize;
+  font-family: Raleway;
+  font-weight: bold;
+  width: 40%;
+  font-size: 2rem;
+  border-bottom:1px solid orangered;
+  padding-bottom: 12px;
+}
+h1, h2 {
+  text-indent: 10px;
+}
+
+.container h1 * {
+  color: orangered;
+}
+
+
+.container h2 {
+  font-size: 1rem;
+  animation: slideDown 0.900s ease-in-out;  
+  color:#fff;
+  
+}
+
+#shape {
+  width: 60%;
+  position: absolute;
+  top: 8%;
+  left: 15%;
+  opacity: 0.4;
+
+}
+
+.data-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+
+}
+
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+}
+
+.form * {
+  font-size: 1.4rem;
+
+}
+
+
+.form input {
+  border:3px solid;
+  outline:none;
+  padding: 10px;
+  border-radius: 10px
+
+}
+
+.error{
+  font-weight: bold;
+  color:red;
+}
+
+.form button {
+  margin-left: 6px;
+  display: inline-block;
+  background: rgba(0,0,0,0);
+  text-transform: uppercase;
+  padding: 15px 10px;
+  color:#fff;
+  border: 2px solid;
+  border-radius: 6px;
+  border-color: rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: all ease-in-out 600ms;
+    outline:none;
+
+}
+
+
+.form button:hover {
+
+  background: rgba(82,106,255,1);
+  color: #fff;
+  border-color: rgba(82,106,255,1);
+  transform: scale(1.2) rotate(4deg);
+}
+
+.form button:active {
+
+  background: rgba(82,244,55,1);
+  color: #fff;
+  border-color: rgba(82,106,255,1);
+  transform: scale(1.2) rotate(4deg);
+}
+
+input:invalid {border-color: red;}
+input:valid {border-color: green;}
+
+.square {
+  background: #394adf;
+  -webkit-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
+  margin: 5px;
+  height: auto;
+  text-align: center;
+  
+  color: #eee;  
+  animation: slideDown 1.5s ease-in-out;
+}
+
+.square p:first-of-type {
+  font-weight: bold;
+  color: orangered;
+}
+
+.data {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: -3px;
+  color: #fff;
+
+}
+
+
+@keyframes slideDown {
+  0% {opacity:0;transform: translateY(-20px)};
+  100% {opacity:1;transform: translateY(0px)}
+}
+
+@media (min-width:480px) and (max-width:870px){
+  
+  .container h1 {
+    width: 70%;
+  }
+
+  .container {
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 98%;
+    border-left:4px solid orangered;
+  
+  }
+
+
+
+
+  .button:disabled {
+    color: rgb(150, 150, 150);
+  }
+  .data-container{
+    grid-template-columns:  1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container h2:first-of-type{
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+  
+ 
+
+}
+
+
+@media (min-width:0px) and (max-width:479px){
+  .container h1 {
+    width: 90%;
+  }
+
+
+  .container {
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 98%;
+    border-left:4px solid orangered;
+  
+  }
+
+
+  .form {
+   margin: 0 auto;
+   grid-template-columns: 1fr;
+   border-radius: 0px;    
+   width: 90%;
+  }
+
+  .form input {
+    border-radius: 0px;
+    width: 100%;
+    padding: 10px 0;
+    text-indent: 10px;
+  }
+  
+  .form button {
+    border-radius: 0px;
+    width: 100%;
+  }
+  .data-container{
+    grid-template-columns:  1fr;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .data {
+    font-size: 1.5rem;
+  }
+
+  .container h2:first-of-type{
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+  
+ 
+
+}
+
+
